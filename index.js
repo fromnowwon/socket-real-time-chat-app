@@ -4,9 +4,9 @@ const http = require('http');
 const server = http.createServer(app);
 
 app.get("/", (req, res) => {
-  res.send("<h1>Hello world</h1>")
+  res.sendFile(__dirname + '/index.html')
 })
 
 server.listen(4000, () => {
-  console.log('Not listening on port 4000')
+  console.log('Now listening on port 4000')
 })

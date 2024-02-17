@@ -9,6 +9,10 @@ app.get("/", (req, res) => {
 	res.sendFile(__dirname + "/index.html");
 });
 
+io.on("connection", () => {
+	console.log("a user connected");
+});
+
 server.listen(4000, () => {
 	console.log("Now listening on port 4000");
 });
